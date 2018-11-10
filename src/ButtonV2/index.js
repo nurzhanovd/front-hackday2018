@@ -56,7 +56,10 @@ class Button extends Component {
             text: telephone
         })
 
-        this.inputStream.next(telephone)
+        if(!telephone.includes('_') && telephone.length){
+            this.inputStream.next(telephone.replace(/\D/g, ''))
+        }
+        
     }
     
     render(){
