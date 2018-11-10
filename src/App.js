@@ -1,25 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react'
+import Button from './ButtonV2'
+import './index.css'
+
 
 
 class App extends Component {
+
+  state = {
+    error: false
+  }
+  
+  getStatistics = (telephone) => {
+    console.log(telephone)
+    this.setState({
+      error: true
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <Fragment>
+      <div className="wrapper">
+        <div className="nav-wrapper">
+          <nav className="navbar">
+            <div className="logo">
+
+            </div>
+            <ul className="navigation-links">
+
+            </ul>
+
+            {/* <Button callBack={this.getStatistics} /> */}
+          </nav>
+        </div>
+        <div className="search-wrapper">
+        <Button callBack={this.getStatistics} error={this.state.error}/>
+        </div>
+        <div className="graph-wrapper">
+        </div>
       </div>
+    </Fragment>
     );
   }
 }
