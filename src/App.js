@@ -6,23 +6,12 @@ import './index.css'
 
 class App extends Component {
 
-  state = {
-    error: false
-  }
-  
-  getStatistics = (telephone) => {
-    console.log(telephone)
-    this.setState({
-      error: true
-    })
-  }
-
   render() {
     return (
     <Fragment>
       <div className="wrapper">
         <div className="search-wrapper">
-          <Button callBack={this.getStatistics} error={this.state.error}/>
+          <Button />
         </div>
         <div className="graph-wrapper">
         </div>

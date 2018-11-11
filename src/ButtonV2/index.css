@@ -46,11 +46,13 @@
 .Wrapper {
   flex: 0 0 60%;
   max-width: 80%;
+  min-width: 60%;
 }
 
 .search-wrapper {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   padding: 50px;
   /* margin-top: 50px; */
@@ -69,6 +71,7 @@
 
 .Input {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .Input-text {

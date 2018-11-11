@@ -18,9 +18,9 @@ html {
 
 body { 
     padding-right: 0px !important;
-    overflow-y: hidden !important;
     margin: 0;
     padding: 0;
+    background-color:var(--hui-ego-znaet);
 }
 
 * {
@@ -29,8 +29,6 @@ body {
 }
 
 .wrapper {
-    background-color:var(--hui-ego-znaet);
-    height: 100vh;
 }
 
 .nav-wrapper {
@@ -55,5 +53,10 @@ body {
     width: 200px;
 }
 
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
 
